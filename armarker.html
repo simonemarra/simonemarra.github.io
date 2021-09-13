@@ -9,19 +9,52 @@
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
   </head>
 
-  <body style="margin: 0; overflow: hidden;">
+  <body style="margin: 0; overflow: hidden">
     <a-scene
       vr-mode-ui="enabled: false"
       embedded
-      arjs="sourceType: webcam; debugUIEnabled: false;"
+      arjs="sourceType: webcam; debugUIEnabled: true;"
     >
       <a-text
         value="This content will always face you."
         look-at="[gps-camera]"
         scale="120 120 120"
         gps-entity-place="latitude: 41.929225; longitude: 12.570244;"
+        position="0 0 0"
       ></a-text>
-      <a-camera gps-camera rotation-reader> </a-camera>
+      <a-camera
+        gps-camera
+        rotation-reader
+        simulateLatitude="41.9291"
+        simulateLongitude="12.5702"
+      >
+      </a-camera>
     </a-scene>
   </body>
+
+  <script>
+    console.log("hello world!");
+    setTimeout(() => {
+      const distanceMsg = document
+        // .querySelector("[gps-entity-place]")
+        .querySelector('a-text')
+        .getAttribute("distanceMsg");
+      console.log(distanceMsg); // "890 meters"
+    }, 5000);
+
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+
+    function showPosition(position) {
+      const gpsText = "Latitude: " + position.coords.latitude +
+      "<br>Longitude: " + position.coords.longitude;
+      console.log(gpsText);
+    }
+    getLocation();
+  </script>
 </html>
