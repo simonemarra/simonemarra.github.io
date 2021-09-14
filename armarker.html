@@ -10,7 +10,7 @@
   </head>
 
   <body style="margin: 0; overflow: hidden">
-    <a-scene
+    <!-- <a-scene
       vr-mode-ui="enabled: false"
       embedded
       arjs="sourceType: webcam; debugUIEnabled: true;"
@@ -18,7 +18,7 @@
       <a-text
         value="This content will always face you."
         look-at="[gps-camera]"
-        scale="120 120 120"
+        scale="15 15 15"
         gps-entity-place="latitude: 41.929225; longitude: 12.570244;"
         position="0 0 0"
       ></a-text>
@@ -28,6 +28,30 @@
         simulateLatitude="41.9291"
         simulateLongitude="12.5702"
       >
+      </a-camera>
+    </a-scene> -->
+    <a-scene
+      vr-mode-ui="enabled: false"
+      embedded
+      arjs='sourceType: webcam; debugUIEnabled: false;'>
+
+          <!-- ~ 400m far -->
+          <!-- <a-box material="color: red;" scale="5 5 5" gps-entity-place="latitude: 44.506477; longitude: 11.301524;"></a-box> -->
+
+          <!-- ~ 20m far -->
+          <!-- <a-image src="place.png" gps-entity-place="latitude: 44.504417; longitude: 11.301317;"
+          ></a-image> -->
+
+          <!-- ~ 0m far -->
+          <a-image src="place.png" gps-entity-place="latitude: 44.504348; longitude: 11.301027;"
+              ></a-image>
+
+          <!-- using gpsMinDistance: 5 => update GPS only if user moves by 5 meters or more => avoid shaking for near objects -->
+          <!-- using accelerationToMove: 1.0 => 'smooth' inertial sensors precision precision in order to avoid distant places shaking -->
+          <a-camera
+              rotation-reader
+              gps-camera="simulateLatitude: 44.50437; simulateLongitude: 11.30106; gpsMinDistance: 10;"
+          >
       </a-camera>
     </a-scene>
   </body>
