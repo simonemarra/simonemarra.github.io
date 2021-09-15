@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Videosphere</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    <script src="./js/play-on-click.js"></script>
+    <script src="./js/hide-on-click.js"></script>
+  </head>
+  <body>
+    <!-- https://cdn.glitch.com/96ab1f6e-16b9-43c1-9df3-fbe9b24a7490%2F360%20Timelapse.mp4?1549922819582 -->
+    <a-scene>
+      <a-assets>
+        <video
+          id="video"
+          preload="auto"
+          src="https://cdn.glitch.com/96ab1f6e-16b9-43c1-9df3-fbe9b24a7490%2F360%20Timelapse.mp4?1549922819582"
+          autoplay
+          loop="true"
+          crossorigin="anonymous"
+        ></video>
+      </a-assets>
+      <a-videosphere
+        rotation="0 -90 0"
+        src="#video"
+        visible="false"
+        play-on-click
+      >
+      </a-videosphere>
+      <a-camera>
+        <a-entity
+          position="0 0 -1.5"
+          text="align: center;
+                width: 6;
+                wrapCount: 100;
+                color: black;
+                value: Click or tap to start video"
+          hide-on-play="#video"
+        >
+        </a-entity>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>
