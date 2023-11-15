@@ -1,0 +1,11 @@
+{
+  "applinks": {
+      "apps": [],
+      "details": [
+      {
+        "appID": "6472225378.it.simonemarra.flutterdeeplinks",
+        "paths": ["*"]
+      }
+    ]
+  }
+}
