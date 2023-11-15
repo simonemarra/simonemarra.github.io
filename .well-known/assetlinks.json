@@ -1,0 +1,9 @@
+[{
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "it.simonemarra.flutterdeeplinks",
+      "sha256_cert_fingerprints":
+      ["96:71:6C:F0:7A:ED:D4:4A:54:3A:A9:F1:2F:A8:E1:C4:FD:C6:F1:61:37:F8:AB:3A:E3:7A:D8:BD:6C:60:D0:3C"]
+    }
+}]
