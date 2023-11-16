@@ -2,7 +2,7 @@
   "applinks": {
       "details": [
       {
-        "appIDs": ["6472225378.it.simonemarra.flutterdeeplinks"],
+        "appIDs": ["AH72868625.it.simonemarra.flutterdeeplinks"],
         "components": [
           {
             "/": "*",
