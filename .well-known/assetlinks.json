@@ -1,9 +1,9 @@
 [{
-    "relation": ["delegate_permission/common.handle_all_urls"],
-    "target": {
-      "namespace": "android_app",
-      "package_name": "it.simonemarra.flutterdeeplinks",
-      "sha256_cert_fingerprints":
-      ["96:71:6C:F0:7A:ED:D4:4A:54:3A:A9:F1:2F:A8:E1:C4:FD:C6:F1:61:37:F8:AB:3A:E3:7A:D8:BD:6C:60:D0:3C"]
-    }
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "it.simonemarra.flutterdeeplinks",
+    "sha256_cert_fingerprints":
+    ["A9:62:3D:00:D8:FC:0D:46:E6:06:5D:0A:60:7D:3F:0D:AE:A1:6A:3C:D6:A3:CE:96:4B:CE:62:88:FD:49:E3:63"]
+  }
 }]
